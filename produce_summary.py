@@ -1,6 +1,9 @@
-def create_melon_report(file):
+def create_melon_report(day_num, file):
+    print()
+    print("Day", day_num)
+
     # open the file 
-    the_file = open("um-deliveries-20140519.txt")
+    the_file = open(file)
     # read each line in file
     for line in the_file:       
         # remove excess whitespace and split into tokens
@@ -14,17 +17,7 @@ def create_melon_report(file):
     # close the file
     the_file.close()
 
-# day 1 report
-print()
-print("Day 1")
-create_melon_report("um-deliveries-20140519.txt")
 
-# day 2 report 
-print()
-print("Day 2")
-create_melon_report("um-deliveries-20140520.txt")
-
-# day 3 report
-print()
-print("Day 3")
-create_melon_report("um-deliveries-20140521.txt")
+create_melon_report(day_num = 1, file = "um-deliveries-20140519.txt")
+create_melon_report(day_num = 2, file = "um-deliveries-20140520.txt")
+create_melon_report(day_num = 3, file = "um-deliveries-20140521.txt")
